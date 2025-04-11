@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: Jack
+    env: node
+    plan: free
+    buildCommand: 'npm install'
+    startCommand: 'node .'
+    envVars:
+      - key: TOKEN
+        value: your_discord_token
+      - key: CLIENT_ID
+        value: your_bot_client_id
+      - key: GUILD_ID
+        value: your_test_guild_id
