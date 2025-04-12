@@ -49,7 +49,8 @@ const client = new Discord.Client({
 //BOT CODED BY: Tomato#6966
 //DO NOT SHARE WITHOUT CREDITS!
 const proxy = 'http://123.123.123.123:8080';
-const agent = https(proxy);
+const HttpsProxyAgent = require("https-proxy-agent");
+const agent = new https(proxy); // Create a new agent
 const { SpotifyPlugin } = require("@distube/spotify");
 const { SoundCloudPlugin } = require("@distube/soundcloud");
 let spotifyoptions = {
