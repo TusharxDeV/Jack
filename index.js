@@ -8,7 +8,8 @@ const libsodium = require("libsodium-wrappers");
 const ffmpeg = require("ffmpeg-static");
 const voice = require("@discordjs/voice");
 const DisTube = require("distube").default;
-const https = require('https-proxy-agent');
+const HttpsProxyAgent = require("https-proxy-agent");
+const agent = new HttpsProxyAgent(proxy);
 const client = new Discord.Client({
     fetchAllMembers: false,
     //restTimeOffset: 0,
